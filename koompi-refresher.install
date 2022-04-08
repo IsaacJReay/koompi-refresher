@@ -1,0 +1,17 @@
+pre_install(){
+    rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.win7showdesktop
+    rm -rf /usr/share/plasma/plasmoids/launchpadPlasma
+    rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.betterinlineclock
+}
+
+post_install() {
+    plasmapkg2 --global --install /opt/org.koompi.refresher/win7showdesktop-v11-plasma5.18.plasmoid
+    plasmapkg2 --global --install /opt/org.koompi.refresher/launchpadPlasma.tar.gz
+    plasmapkg2 --global --install /opt/org.koompi.refresher/betterinlineclock.tar.gz
+}
+
+post_remove() {
+    rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.win7showdesktop
+    rm -rf /usr/share/plasma/plasmoids/launchpadPlasma
+    rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.betterinlineclock
+}
