@@ -1,12 +1,12 @@
 pkgname=koompi-refresher
 pkgver=2.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Refresher for KOOMPI'
 arch=(x86_64)
 url="https://koompi.com"
 install="$pkgname.install"
 license=('custom')
-# depends=('plasma')
+depends=('plasma-desktop')
 source=(
     "file://refresher_20201016.tar.gz"
     "$pkgname.install"
